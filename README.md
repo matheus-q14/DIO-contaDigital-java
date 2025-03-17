@@ -5,8 +5,13 @@ Desafio: Considerando nosso conhecimento no domínio bancário, iremos abstrair 
 Implementação extra além dos métodos de sacar e depositar:
 
 Criação de um investimento (CDB)
+
 Registro de investimento em uma conta corrente
+
 Calulo do rendimento com base na taxa de juros determinada ao criar o investimento e na data de resgate
+
 Resgate do investimento para conta corrente
+
 Cálculo da rentabilidade da poupança com base numa taxa previamente estabelecida (cerca de 0.6% ao mês)
+
 Criação e vinculação de uma banco para uma conta
