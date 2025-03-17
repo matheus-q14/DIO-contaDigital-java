@@ -1,5 +1,6 @@
 package contas;
 
+import Banco.Banco;
 import cliente.Cliente;
 
 public abstract class Conta implements IConta {
@@ -8,6 +9,7 @@ public abstract class Conta implements IConta {
 
     protected int agencia;
     protected int numero;
+    protected Banco banco;
     protected double saldo;
     protected Cliente cliente;
 

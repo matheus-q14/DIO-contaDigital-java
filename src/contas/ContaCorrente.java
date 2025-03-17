@@ -1,5 +1,6 @@
 package contas;
 
+import Banco.Banco;
 import cliente.Cliente;
 
 import java.time.LocalDate;
@@ -7,10 +8,12 @@ import java.time.LocalDate;
 public class ContaCorrente extends Conta {
     private int SEQUECIA_CONTA = 1;
 
-    public ContaCorrente(Cliente cliente) {
+    public ContaCorrente(Cliente cliente, Banco banco) {
         this.agencia = AGENCIA_PADRAO;
         this.numero = 10 + SEQUECIA_CONTA++;
         this.cliente = cliente;
+        this.banco = banco;
+        this.banco.addConta(this);
     }
 
     public void fazerInvestimento(double valorAplicacao, double taxaRentabilidadeAnual) throws RuntimeException {

@@ -1,5 +1,6 @@
 package contas;
 
+import Banco.Banco;
 import cliente.Cliente;
 
 import java.time.LocalDate;
@@ -11,11 +12,13 @@ public class ContaPoupanca extends Conta {
     private final double taxaRendimentoPoupanca;
     private LocalDate dataUltimoDeposito;
 
-    public ContaPoupanca(Cliente cliente, double taxaRendimentoPoupanca) {
+    public ContaPoupanca(Cliente cliente, double taxaRendimentoPoupanca, Banco banco) {
         this.agencia = AGENCIA_PADRAO;
         this.numero = 20 + SEQUECIA_CONTA++;
         this.cliente = cliente;
         this.taxaRendimentoPoupanca = taxaRendimentoPoupanca;
+        this.banco = banco;
+        this.banco.addConta(this);
     }
 
     public double calcularRendimentoPoupanca(LocalDate dataSaque) {
